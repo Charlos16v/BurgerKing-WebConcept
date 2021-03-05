@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Burger King</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link rel="icon" href="./images/fav-icon-bk.png" type="image/gif" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="logo">
+                    <img src="./images/bk-logo.png" >
+                </div>
+                <nav class="header-buttons">
+                    <a href="./index.html">Home</a>
+                    <a href="./orders.html">Orders</a>
+                    <a href="./about.html">About</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="container">
+                <section class="order" id="form">
+                    <h1 id="orders"> <span>Order's? </span></h1>
+                    <form>
+                        <!-- Input tipo "text" para recoger el nombre, es requerido y tiene el atributo "autofocus".-->
+                        <label for="username">Username: </label>
+                        <input type="text" name="username" id="username" required autofocus title="Introduce your name">
+
+                        <label for="age">Age: </label>
+                        <input type="text" name="age" id="age" required title="Introduce your age">
+
+                        <label for="order">Order: </label>
+                        <textarea type="text" name="order" id="order" required maxlength="35" title="Introduce your order"></textarea><br><br><br>
+                        <!-- Input tipo "submit", para enviar el formulario.-->
+                        <button type="submit" class="button">Submit!</button>
+                        <button type="reset" class="button">Reset!</button>
+                        <button type="button" onclick="addContent()" class="button">Add!</button>
+                    </form>
+                </section>
+                <section  class="order" class="container_t" id="list">
+                    <h1 id="order_title">Order List</h1>
+                    <div class="tumbleweed"></div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>Carlos Uriel Domínguez Ruiz-Díaz</p>
+        </footer>
+        <script src="./main.js"></script>
+    </body>
+</html>

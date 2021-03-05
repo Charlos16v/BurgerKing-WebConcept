@@ -332,22 +332,36 @@ h2.user {
 }
 
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
 
     #hungry {
         line-height: 80px;
         font-size: 80px;
     }
 
-    .logo img {
-        width: 130px;
-        height: 97.5px;
-        margin-left: 20px;
+    div.logo {
+        display: block;
+        margin: auto;
     }
 
-    .header-buttons {
-        margin-right: 0 ;
+    .logo img {
+        margin-left: 0;
+        width: 130px;
+        height: 97.5px;
+    }
+
+    .header {
         display: flex;
+        flex-direction: column;
+
+    }
+    .header-buttons {
+        text-align: center;
+        align-content: center;
+
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
     }
 
     footer {
@@ -382,5 +396,10 @@ h2.user {
     }
 
 
+.header a {
+    margin: 0;
+    align-items: center;
+    text-align: center;
+}
 
 }

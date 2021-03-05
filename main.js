@@ -1,17 +1,14 @@
-function deleteTumbleweed() {
-    var element = document.getElementsByClassName("tumbleweed").item(0);
-    element.remove();
-}
 
 function addContent() {
+
+    var lista = document.getElementById("order_title");
+    username = document.getElementById("username").value;
+    age = document.getElementById("age").value;
+    order = document.getElementById("order").value;
+
     if (document.getElementsByClassName("tumbleweed").item(0) && checkForm()) {
         deleteTumbleweed()
     }
-
-    var lista = document.getElementById("order_title");
-    var username = document.getElementById("username").value;
-    var age = document.getElementById("age").value;
-    var order = document.getElementById("order").value;
 
     if (checkForm()) {
         lista.insertAdjacentHTML('afterend', "<h2 class='user'> -Username: " + username + "</h2>" +
@@ -20,8 +17,12 @@ function addContent() {
 }
 
 function checkForm() {
-    if (username != "" && age != "" && order != "") {
+    if (username != '' ) {
         return true;
     }
 }
 
+function deleteTumbleweed() {
+    var element = document.getElementsByClassName("tumbleweed").item(0);
+    element.remove();
+}

@@ -17,7 +17,7 @@ function addContent() {
 }
 
 function checkForm() {
-    if (username != '' ) {
+    if (username != '' && age != '' && order != '') {
         return true;
     }
 }

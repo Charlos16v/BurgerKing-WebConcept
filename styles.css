@@ -332,7 +332,7 @@ h2.user {
 }
 
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
 
     #hungry {
         line-height: 80px;

@@ -46,8 +46,7 @@ body#red{
 .images_about {
     animation: 1s ease-out 0s 1 slideInFromLeft;
     animation-timing-function: cubic-bezier(.5,.01,.5,1); /* Importante, curva de bezier encargarda de que la velocidad no sea constante en toda la animacion.*/
-    width: 100%;
-    height: 1000%;
+    width: 50%;
 }
 
 p {

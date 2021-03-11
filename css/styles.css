@@ -63,12 +63,10 @@ body#red{
     border-radius: 4px;
 }
 
-
 .header-buttons a:hover {
     background-color: var(--white);
     color: var(--red);
 }
-
 
 .header-buttons {
     animation: 1s ease-out 0s 1 slideInFromLeft;
@@ -191,6 +189,12 @@ footer {
 
 /* CONTAINERS AREA */
 
+.principal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
 /* Contenedor padre con display flex.*/
 #container {
     display: flex;
@@ -207,6 +211,7 @@ section.order {
 section#form.order {
     width: 65%;
 }
+
 
 /* FORM AREA */
 

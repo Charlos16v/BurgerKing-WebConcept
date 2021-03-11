@@ -35,20 +35,27 @@
                         <label for="username">Username: </label>
                         <input type="text" name="username" id="username" required autofocus title="Introduce your name">
 
+                        <!-- Input tipo "number" para recoger la edad del usuario, es requerido.-->
                         <label for="age">Age: </label>
-                        <input type="text" name="age" id="age" required title="Introduce your age">
+                        <input type="number" name="age" id="age" required title="Introduce your age">
 
+                        <!-- Input tipo "text" para recoger el pedido, es requerido.-->
                         <label for="order">Order: </label>
                         <textarea type="text" name="order" id="order" required maxlength="35" title="Introduce your order"></textarea><br><br><br>
+
                         <!-- Input tipo "submit", para enviar el formulario.-->
                         <button type="submit" class="button">Submit!</button>
+
+                        <!-- Input tipo "reset", para resetear el formulario.-->
                         <button type="reset" class="button">Reset!</button>
+
+                        <!-- Boton encargado de ejecutar la funcion de JavaScript "addContent()".-->
                         <button type="button" onclick="addContent()" class="button">Add!</button>
                     </form>
                 </section>
                 <section  class="order" class="container_t" id="list">
                     <h1 id="order_title">Order List</h1>
-                    <div class="tumbleweed"></div>
+                    <div class="tumbleweed"></div> <!-- Contenedor que contiene el "tumbleweed, que es animado en CSS."-->
                 </section>
             </div>
         </main>

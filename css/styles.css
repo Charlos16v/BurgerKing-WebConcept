@@ -1,5 +1,5 @@
 :root {
-    /* Colors */
+    /* Colores */
     --white: #f3ecd9;
     --orange: #f08c45;
     --red: #c6361f;
@@ -8,7 +8,10 @@
     --brown: #4b2517;
 }
 
+/* Propiedades para asegurar los margenes y los padding, asegurameos el box-sizing con border-box.*/
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -19,6 +22,7 @@ body{
     background-color: var(--orange);
 }
 
+/* Body pagina about.*/
 body#red{
     margin: 0px;
     padding: 0px;
@@ -27,6 +31,8 @@ body#red{
 }
 
 
+/* HEADER AREA */
+/* Header con animacion... utilizamos display flex para la colocacion de su contenido.*/
 .header {
     animation: 1s ease-out 0s 1 slideInFromLeft;
     animation-timing-function: cubic-bezier(.5,.01,.5,1);
@@ -37,30 +43,11 @@ body#red{
     align-content: center;
 }
 
+/* Imagen con class="logo" (logo BurgerKing header)*/
 .logo img {
     width: 180px;
     height: 135px;
     margin-left: 20px;
-}
-
-.images_about {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-    animation-timing-function: cubic-bezier(.5,.01,.5,1); /* Importante, curva de bezier encargarda de que la velocidad no sea constante en toda la animacion.*/
-    width: 50%;
-}
-
-p {
-    color: var(--white);
-}
-
-.text p {
-    line-height: 30px;
-    text-align: right;
-    width: 97%;
-}
-
-.text h2 {
-    color: var(--white);
 }
 
 .header a {
@@ -92,6 +79,39 @@ p {
     align-items: center;
 }
 
+.header-buttons :hover {
+    /* Duracion de la animacion 1s. */
+    animation: shake 1s;
+
+    /* Cuando la animacion finalice, que vuelva a iniciarse. */
+    animation-iteration-count: infinite;
+}
+
+.logo :hover {
+    /* Duracion de la animacion 1s. */
+    animation: shake 1s;
+
+    /* Cuando la animacion finalice, que vuelva a iniciarse. */
+    animation-iteration-count: infinite;
+}
+
+
+/* TEXTS AREA */
+/* Definimos el color de todos los elementos p*/
+p {
+    color: var(--white);
+}
+
+.text p {
+    line-height: 30px;
+    text-align: right;
+    width: 97%;
+}
+
+.text h2 {
+    color: var(--white);
+}
+
 #hungry {
     animation: 1s ease-out 0s 1 slideInFromLeft;
     animation-timing-function: cubic-bezier(.5,.01,.5,1);
@@ -105,18 +125,6 @@ p {
     border-bottom: 30px solid var(--red);
 }
 
-.principal {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.principal img#mix{
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-    animation-timing-function: cubic-bezier(.5,.01,.5,1);
-    width: 100%;
-}
-
 main section .text {
     animation: 1s ease-out 0s 1 slideInFromLeft;
     animation-timing-function: cubic-bezier(.5,.01,.5,1);
@@ -126,49 +134,6 @@ main section .text {
 }
 
 main section .text h2 {
-    text-align: center;
-}
-
-footer {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-    animation-timing-function: cubic-bezier(.5,.01,.5,1);
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: var(--brown);
-    padding: 12px;
-}
-
-.header-buttons :hover {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake 1s;
-
-    /* When the animation is finished, start again*/
-    animation-iteration-count: infinite;
-}
-.logo :hover {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake 1s;
-
-    /* When the animation is finished, start again */
-    animation-iteration-count: infinite;
-}
-
-label {
-    display: block;
-    margin: 20px;
-    font-size: 20px;
-    letter-spacing: 0.5;
-}
-
-#container {
-    display: flex;
-}
-
-section.order {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-    animation-timing-function: cubic-bezier(.5,.01,.5,1);
-    align-items: center;
     text-align: center;
 }
 
@@ -189,13 +154,68 @@ section.order {
     font-size: 50px;
     color: var(--brown);
 }
-section#list.order {
-    background-color: var(--white);
-    width: 35%;
+
+h2.user {
+    letter-spacing: 0.5px;
+    color: var(--brown);
+    margin-left: 60px;
+    font-size: 20px;
+    text-align: left;
+}
+
+/* IMAGE AREA*/
+/* Imagenes página about */
+.images_about {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation-timing-function: cubic-bezier(.5,.01,.5,1); /* Importante, curva de bezier encargarda de que la velocidad no sea constante en toda la animacion.*/
+    width: 50%;
+}
+
+.principal img#mix{
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation-timing-function: cubic-bezier(.5,.01,.5,1);
+    width: 100%;
+}
+
+/* FOOTER AREA */
+
+footer {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation-timing-function: cubic-bezier(.5,.01,.5,1);
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--brown);
+    padding: 12px;
+}
+
+/* CONTAINERS AREA */
+
+/* Contenedor padre con display flex.*/
+#container {
+    display: flex;
+}
+
+/* Contenedores section con clase order ajustados. */
+section.order {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation-timing-function: cubic-bezier(.5,.01,.5,1);
+    align-items: center;
+    text-align: center;
 }
 
 section#form.order {
     width: 65%;
+}
+
+/* FORM AREA */
+
+/* Ajustamos los label del formulario. */
+label {
+    display: block;
+    margin: 20px;
+    font-size: 20px;
+    letter-spacing: 0.5;
 }
 
 input {
@@ -230,6 +250,42 @@ textarea:focus {
     width: 22%;
 }
 
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: var(--white);
+    background-color: var(--brown);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 9px var(--white);
+    margin-right: 13px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5;
+}
+
+.button:hover {
+    background-color: var(--red)
+}
+
+.button:active {
+    background-color: var(--green);
+    box-shadow: 0 5px ;
+    transform: translateY(4px);
+}
+
+section#list.order {
+    background-color: var(--white);
+    width: 35%;
+}
+
+/* TUMBLEWEED AREA (Animacion rodillo del desierto) */
+
 .container_t {
     width: 35%;
     overflow: hidden;
@@ -244,14 +300,14 @@ textarea:focus {
     height: 70px;
     background: url('https://vignette4.wikia.nocookie.net/imaspeedrunner/images/3/3a/Orphan_tumbleweed.png/revision/latest?cb=20131006213006') no-repeat;
     background-size: 100%;
-}
-
-.tumbleweed{
     animation: tumbleweed linear 4s;
     animation-iteration-count: infinite;
 }
 
-    @keyframes tumbleweed{
+/* ANIMATIONS AREA */
+/* Keyframes de la animacion "tumbleweed", simula un movimiento natural, moviendose hacia delante mientras va rotando.
+    al final de la animación desaparece.*/
+@keyframes tumbleweed{
     0% {
         visibility: visible;
         transform:  translate(0,45px)  rotate(0deg) ;
@@ -284,42 +340,7 @@ textarea:focus {
     }
 }
 
-h2.user {
-    letter-spacing: 0.5px;
-    color: var(--brown);
-    margin-left: 60px;
-    font-size: 20px;
-    text-align: left;
-}
-
-.button {
-    display: inline-block;
-    padding: 15px 25px;
-    font-family: 'Anton', sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: var(--white);
-    background-color: var(--brown);
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 9px var(--white);
-    margin-right: 13px;
-    margin-bottom: 30px;
-    letter-spacing: 0.5;
-}
-
-.button:hover {background-color: var(--red)}
-
-.button:active {
-    background-color: var(--green);
-    box-shadow: 0 5px ;
-    transform: translateY(4px);
-}
-
-
+/* Keyframes de la animacion shake, encargados de simular "vibracion", alterando su posicion en cada keyframe. */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -334,6 +355,7 @@ h2.user {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+/* Keyframes de la animacion "slideInFromLeft", es la animacion que hace aparecer los elementos de izquierda a derecha. */
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -343,7 +365,9 @@ h2.user {
     }
 }
 
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+
+/* MEDIA QUERY'S AREA */
+  /* Media query encargado de hacer el responsive a partir de 600px de width en la pantalla del dispositivo. */
 @media screen and (max-width: 600px) {
 
     #hungry {
@@ -400,7 +424,6 @@ h2.user {
         width: 100%;
     }
 
-
     .header a {
         margin: 0;
         align-items: center;
@@ -436,7 +459,7 @@ h2.user {
 
 }
 
-
+/* Media query encargado de hacer el responsive a partir de 1130px de width en la pantalla del dispositivo. */
 @media screen and (max-width: 1130px) {
 
     .principal {
